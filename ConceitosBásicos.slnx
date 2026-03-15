@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/ConceitosBasicos/">
+    <Project Path="ConceitosBásicos/ConceitosBasicos.csproj" />
+  </Folder>
+  <Folder Name="/Revisao/">
+    <Project Path="Revisão/Revisão.csproj" />
+  </Folder>
+  <Folder Name="/RevisaoComSwitch/">
+    <Project Path="RevisaoComSwitch/RevisãoComSwitch.csproj" />
+  </Folder>
+</Solution>
