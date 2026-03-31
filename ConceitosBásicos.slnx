@@ -2,6 +2,14 @@
   <Folder Name="/ConceitosBasicos/">
     <Project Path="ConceitosBásicos/ConceitosBasicos.csproj" />
   </Folder>
+  <Folder Name="/POO/">
+    <Project Path="POO/POO.csproj" Id="2dbfb237-ae99-4633-8a35-17f731f06552" />
+  </Folder>
+  <Folder Name="/POO/dominio/">
+    <File Path="Class1.cs" />
+    <File Path="Class2.cs" />
+    <File Path="Class3.cs" />
+  </Folder>
   <Folder Name="/Revisao/">
     <Project Path="Revisão/Revisão.csproj" />
   </Folder>
