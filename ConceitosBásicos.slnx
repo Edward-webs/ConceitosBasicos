@@ -8,4 +8,7 @@
   <Folder Name="/RevisaoComSwitch/">
     <Project Path="RevisaoComSwitch/RevisãoComSwitch.csproj" />
   </Folder>
+  <Folder Name="/SuperTrunfo/">
+    <Project Path="Super Trunfo/Super Trunfo.csproj" Id="e31764c0-5d80-44b8-9d54-095090040f5a" />
+  </Folder>
 </Solution>
