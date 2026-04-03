@@ -2,34 +2,68 @@
 using System.Collections.Generic;
 public class Card
 {
-    public string Code { get; set; }
-    public string Name { get; set; }
-    public int Hp { get; set; }
-    public int Power { get; set; }
-    public int Speed { get; set; }
-    public int Strength { get; set; }
-    public int Resistance { get; set; }
+    private string _code;
+    private string _name;
+    private int _hp;
+    private int _power;
+    private int _speed;
+    private int _strength;
+    private int _resistance;
+    public string Code
+    {
+        get { return _code; }
+        set { _code = value; }
+    }
+    public string Name
+    {
+        get { return _name; }
+        set { _name = value; }
+    }
+    public int Hp
+    {
+        get { return _hp; }
+        set { _hp = value; }
+    }
+    public int Power
+    {
+        get { return _power; }
+        set { _power = value; }
+    }
+    public int Speed
+    {
+        get { return _speed; }
+        set { _speed = value; }
+    }
+    public int Strength
+    {
+        get { return _strength; }
+        set { _strength = value; }
+    }
+    public int Resistance
+    {
+        get { return _resistance; }
+        set { _resistance = value; }
+    }
     public Card(string code, string name, int hp, int power, int speed, int strength, int resistance)
     {
-        Code = code;
-        Name = name;
-        Hp = hp;
-        Power = power;
-        Speed = speed;
-        Strength = strength;
-        Resistance = resistance;
-
+        _code = code;
+        _name = name;
+        _hp = hp;
+        _power = power;
+        _speed = speed;
+        _strength = strength;
+        _resistance = resistance;
     }
     public void displayCard()
     {
         Console.WriteLine("-----Carta-----:");
-        Console.WriteLine($"Código: {Code}");
-        Console.WriteLine($"Nome: {Name}");
-        Console.WriteLine($"HP: {Hp}");
-        Console.WriteLine($"Poder: {Power}");
-        Console.WriteLine($"Velocidade: {Speed}");
-        Console.WriteLine($"Força: {Strength}");
-        Console.WriteLine($"Resistência: {Resistance}");
+        Console.WriteLine($"Código: {_code}");
+        Console.WriteLine($"Nome: {_name}");
+        Console.WriteLine($"HP: {_hp}");
+        Console.WriteLine($"Poder: {_power}");
+        Console.WriteLine($"Velocidade: {_speed}");
+        Console.WriteLine($"Força: {_strength}");
+        Console.WriteLine($"Resistência: {_resistance}");
         Console.WriteLine("---------------");
     }
 }
