@@ -87,7 +87,7 @@ public class Deck
         _cards.Add(new Card("B1", "Necromante", 80, 90, 50, 70, 65));
         _cards.Add(new Card("B2", "Monge", 90, 80, 85, 60, 75));
         _cards.Add(new Card("B3", "Feiticeiro", 85, 90, 60, 70, 65));
-        _cards.Add(new Card("B4", "Guerreiro", 100, 85, 40, 80, 90));
+        _cards.Add(new Card("B4", "Anão", 100, 85, 40, 80, 90));
         _cards.Add(new Card("B5", "Golbin", 60, 70, 50, 40, 30));
         _cards.Add(new Card("B6", "Orc", 110, 80, 30, 90, 70));
         _cards.Add(new Card("B7", "Troll", 120, 75, 20, 85, 80));
@@ -116,5 +116,8 @@ public class Deck
 }
 class Program
 {
-    static void Main(string[] args) { }
+    static void Main(string[] args)
+    {
+        
+    }
 }
