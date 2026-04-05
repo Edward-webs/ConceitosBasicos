@@ -1,4 +1,5 @@
-﻿using System;
+﻿#region Dudu
+using System;
 using System.Collections.Generic;
 public class Card
 {
@@ -114,10 +115,120 @@ public class Deck
         return _cards;
     }
 }
+#endregion
+
+#region Julia
 class Program
 {
     static void Main(string[] args)
     {
-        
+        Console.WriteLine("Bem-vindo ao jogo Super Trunfo - Fantasia Medieval!\nDigite seu nome:");
+        string nome = Console.ReadLine();
+        Console.WriteLine($"\nOlá, {nome}!:)\n---Menu de opções---\nDigite:\n1. Novo jogo\n2. Configurações\n3. Sair do jogo\n--------------------\n");
+
+        bool sair = false;
+        while (!sair)
+        {
+            string entrada = Console.ReadLine();
+            int opcao;
+            int i;
+
+            if (int.TryParse(entrada, out opcao))
+            {
+                if (opcao == 1)
+                {
+                    Console.WriteLine("\nIniciando um novo jogo...");
+                    Console.WriteLine("As cartas foram sorteadas e dividas\n");
+
+                    Deck baralho = new Deck();
+                    List<Card> cartas = new List<Card>(baralho.GetCards());
+
+                    List<Card> jogador = new List<Card>();
+                    List<Card> computador = new List<Card>();
+
+                    Random embaralho = new Random();
+
+                    for (i = 0; i < 15; i++)
+                    {
+                        int a = embaralho.Next(cartas.Count);
+                        int b = embaralho.Next(cartas.Count);
+
+                        Card temporaria = cartas[a];
+                        cartas[a] = cartas[b];
+                        cartas[b] = temporaria;
+                    }
+
+                    for (i = 0; i < cartas.Count; i++)
+                        if (i % 2 == 0)
+                        {
+                            jogador.Add(cartas[i]);
+                        }
+                        else
+                        {
+                            computador.Add(cartas[i]);
+                        }
+
+                    int rodada = 1;
+
+                    Random sorteada = new Random();
+                    int c = sorteada.Next(jogador.Count);
+                    jogador[c].displayCard();
+                    Console.WriteLine($"Essa é sua {rodada}º carta sorteada!\n");
+
+                    rodada++;
+
+                    if (rodada % 2 == 0)
+                    {
+                        Console.WriteLine("Escolha qual característica sua carta vai disputar nessa rodada:\n A. HP\n B. Poder\n C. Velocidade\n D. Força\n E. Resistência");
+                    }
+                    else
+                    {
+                        Random atributo_aleatorio = new Random();
+                    }
+                    string resposta = Console.ReadLine();
+
+                    if (resposta.ToUpper() == "A")
+                    {
+                        Console.WriteLine("Você escolheu disputar por HP");
+                    }
+                    else if (resposta.ToUpper() == "B")
+                    {
+                        Console.WriteLine("Você escolheu disputar por Poder!");
+                    }
+                    else if (resposta.ToUpper() == "C")
+                    {
+                        Console.WriteLine("Você escolheu disputar por Velocidade!");
+                    }
+                    else if (resposta.ToUpper() == "D")
+                    {
+                        Console.WriteLine("Você escolheu disputar por Força!");
+                    }
+                    else if (resposta.ToUpper() == "E")
+                    {
+                        Console.WriteLine("Você escolheu disputar por Resistência!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Opção inválida! Tente novamente.");
+                    }
+                }
+                else if (opcao == 2)
+                {
+                    Console.WriteLine("Abrindo configurações...");
+                    Console.WriteLine($"Olá, {nome}!\n" + "Nessa versão de fantasia medieval do jogo Super Trunfo, dois jogadores, sendo um o computador, recebem 16 cartas (31 cartas temáticas + 1 carta Super Trunfo), totalizando 32 cartas.");
+                }
+                else if (opcao == 3)
+                {
+                    Console.WriteLine("Saindo do jogo...");
+                    sair = true;
+                }
+                else
+                {
+                    Console.WriteLine("Você digitou um valor inválido!");
+                }
+            }
+        }
+
     }
 }
+#endregion
