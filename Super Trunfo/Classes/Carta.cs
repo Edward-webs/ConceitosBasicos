@@ -48,7 +48,12 @@ namespace Super_Trunfo.Classes
             set { _resistance = value; }
         }
 
-        public Carta(string code, string name, int hp, int power, int speed, int strength, int resistance)
+        public bool Supertrunfo
+        {
+            get; set;
+        }
+
+        public Carta(string code, string name, int hp, int power, int speed, int strength, int resistance, bool supertrunfo = false)
         {
             _code = code;
             _name = name;
@@ -57,10 +62,16 @@ namespace Super_Trunfo.Classes
             _speed = speed;
             _strength = strength;
             _resistance = resistance;
+            Supertrunfo = supertrunfo;
         }
 
         public void displayCard()
         {
+            if (Supertrunfo)
+            {
+                Console.WriteLine("Carta Super Trunfo!");
+            }
+
             Console.WriteLine("\n------- SUA CARTA -------");
             Console.WriteLine($"[{_code}] {_name}");
             Console.WriteLine($"A. HP: {_hp}");

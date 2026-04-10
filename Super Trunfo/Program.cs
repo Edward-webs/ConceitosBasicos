@@ -105,7 +105,19 @@ class Program
                         break;
                 }
             }
-            
+            if (jCarta.Supertrunfo)
+            {
+                Console.WriteLine("SUPER TRUNFO! Você VENCEU essa rodada automaticamente!");
+                aJogador = 1;
+                aComputador = 0;
+            }
+            else if (cCarta.Supertrunfo)
+            {
+                Console.WriteLine("O computador possui SUPER TRUNFO! Você PERDEU essa rodada automaticamente!");
+                aJogador = 0;
+                aComputador = 1;
+            }
+
             Console.WriteLine($"\nSua carta: {jCarta.Name} ({aJogador}) vs Carta do Computador: {cCarta.Name} ({aComputador})");
 
             totalJogador--;
@@ -116,7 +128,7 @@ class Program
                 jogadorBaralho[i] = jogadorBaralho[i + 1];
             }
 
-            for (int i =0; i < totalComputador; i++)
+            for (int i = 0; i < totalComputador; i++)
             {
                 computadorBaralho[i] = computadorBaralho[i + 1];
             }
@@ -144,7 +156,7 @@ class Program
                 totalComputador++;
             }
 
-            if (totalJogador >=32 || totalComputador >= 32)
+            if (totalJogador >= 32 || totalComputador >= 32)
             {
                 break;
             }
