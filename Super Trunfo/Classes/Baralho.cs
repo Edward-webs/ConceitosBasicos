@@ -36,7 +36,7 @@ namespace Super_Trunfo.Classes
             _cards[25] = new Carta("D2", "Minotauro", 120, 85, 30, 90, 80);
             _cards[26] = new Carta("D3", "Fênix", 110, 90, 60, 85, 75);
             _cards[27] = new Carta("D4", "Grifo", 100, 80, 70, 75, 65);
-            _cards[28] = new Carta("D5", "Hidra", 130, 85, 40, 90, 80, true);
+            _cards[28] = new Carta("D5", "SUPER TRUNFO", 130, 85, 40, 90, 80, true);
             _cards[29] = new Carta("D6", "Quimera", 120, 80, 50, 85, 75);
             _cards[30] = new Carta("D7", "Gigante", 90, 75, 80, 65, 60);
             _cards[31] = new Carta("D8", "Fantasma", 95, 80, 70, 75, 65);
